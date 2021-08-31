@@ -1,11 +1,7 @@
 import Table from "./Table";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <Table />
-    </div >
+    <Table />
   );
 }
-
-export default App;

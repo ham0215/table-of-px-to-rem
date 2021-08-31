@@ -1,5 +1,5 @@
-export default function Table({ hoge = 'hoge2' }: { hoge?: string }) {
+export default function Table() {
   return (
-    <div>{hoge}</div>
+    <div>hoge</div>
   );
 }
