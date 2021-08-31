@@ -1,4 +1,4 @@
-import Container from '@material-ui/core/Container';
+import { Container } from '@material-ui/core';
 import Copyright from './Copyright';
 import Table from './Table';
 
