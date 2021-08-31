@@ -1,7 +1,12 @@
-import Table from "./Table";
+import Container from '@material-ui/core/Container';
+import Copyright from './Copyright';
+import Table from './Table';
 
 export default function App() {
   return (
-    <Table />
+    <Container maxWidth="sm">
+      <Table />
+      <Copyright />
+    </Container>
   );
 }

@@ -1,5 +1,5 @@
+import Button from '@material-ui/core/Button';
+
 export default function Table() {
-  return (
-    <div>hoge</div>
-  );
+  return <Button variant="contained">Hello World</Button>;
 }
