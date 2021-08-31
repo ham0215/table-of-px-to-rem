@@ -16,13 +16,13 @@ const PrimaryItem = styled(Item)(({ theme }) => ({
 
 export default function Table({ index, fontSize }: { index: number, fontSize: number }) {
   let list = [];
+  const startPx = 1 + (index - 1) * 100;
 
-  for (let px = index; px <= index + 100; px++) {
+  for (let px = startPx; px < startPx + 100; px++) {
     const rem = px / fontSize;
     list.push(
       <Grid item>
         {Number.isInteger(rem) ? <PrimaryItem>{px}px = {rem}rem</PrimaryItem> : <Item>{px}px = {rem}rem</Item>}
-
       </Grid>
     );
   }

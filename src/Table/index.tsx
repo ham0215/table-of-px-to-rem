@@ -3,12 +3,13 @@ import Items from './Items';
 import useTable from './useTable';
 
 export default function Table() {
-  const { index, setIndex, fontSize, setFontSize } = useTable();
+  const { index, handleChangeIndex, fontSize, handleChangeFontSize, error } = useTable();
   return (
     <>
-      <Pagination count={11} color="primary" boundaryCount={11} hideNextButton hidePrevButton size='small' />
+      {error && <div>{error}</div>}
+      <Pagination count={11} color="primary" boundaryCount={11} hideNextButton hidePrevButton size='small' onChange={handleChangeIndex} />
       <Items index={index} fontSize={fontSize} />
-      <Pagination count={11} color="primary" boundaryCount={11} hideNextButton hidePrevButton size='small' />
+      <Pagination count={11} color="primary" boundaryCount={11} hideNextButton hidePrevButton size='small' onChange={handleChangeIndex} />
     </>
   );
 }
