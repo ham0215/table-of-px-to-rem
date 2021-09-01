@@ -1,18 +1,12 @@
-function App() {
+import { Container } from '@material-ui/core';
+import Copyright from './Copyright';
+import Table from './Table';
+
+export default function App() {
   return (
-    <div>
-      <header className="App-header">
-        < a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div >
+    <Container maxWidth="xl">
+      <Table />
+      <Copyright />
+    </Container>
   );
 }
-
-export default App;
