@@ -17,7 +17,7 @@ export default function Table() {
         {error && <Alert severity="error">{error}</Alert>}
       </Box>
       <Box sx={{ margin: '0.5rem' }}>
-        <TextField label="font-size(px)" variant="outlined" onChange={handleChangeFontSize} defaultValue={fontSize} />
+        <TextField label="font-size(px)" variant="outlined" onChange={handleChangeFontSize} value={fontSize} />
       </Box>
 
       <Box sx={{ margin: '0.5rem' }} >
