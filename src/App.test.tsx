@@ -9,7 +9,6 @@ let container: HTMLDivElement | null = null;
 const i18nResource = i18n.getDataByLanguage(i18n.language)!;
 
 describe('ログイン', () => {
-
   beforeEach(() => {
     // setup a DOM element as a render target
     container = document.createElement('div');

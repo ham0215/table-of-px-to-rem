@@ -9,30 +9,17 @@ export default function Table() {
     <>
       <Box sx={{ margin: '0.5rem' }}>{error && <Alert severity="error">{error}</Alert>}</Box>
       <Box sx={{ margin: '0.5rem' }}>
-        <TextField
-          label="font-size(px)"
-          variant="outlined"
-          onChange={handleChangeFontSize}
-          value={fontSize}
-        />
+        <TextField label="font-size(px)" variant="outlined" onChange={handleChangeFontSize} value={fontSize} />
       </Box>
 
       <Box sx={{ margin: '0.5rem' }}>
-        <Pagination
-          page={index}
-          paginationMaxCount={PAGINATION_MAX_COUNT}
-          handleChangeIndex={handleChangeIndex}
-        />
+        <Pagination page={index} paginationMaxCount={PAGINATION_MAX_COUNT} handleChangeIndex={handleChangeIndex} />
       </Box>
       <Box>
         <Items index={index} fontSize={fontSize} />
       </Box>
       <Box sx={{ margin: '0.5rem' }}>
-        <Pagination
-          page={index}
-          paginationMaxCount={PAGINATION_MAX_COUNT}
-          handleChangeIndex={handleChangeIndex}
-        />
+        <Pagination page={index} paginationMaxCount={PAGINATION_MAX_COUNT} handleChangeIndex={handleChangeIndex} />
       </Box>
     </>
   );
