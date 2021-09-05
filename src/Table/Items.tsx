@@ -20,7 +20,7 @@ export default function Table({ index, fontSize }: { index: number; fontSize: nu
   const { handleCopy, openSnackBar, closeSnackBar } = useCopy();
   const { t } = useTranslation();
 
-  let list = [];
+  const list = [];
   const startPx = 1 + (index - 1) * 100;
   for (let px = startPx; px < startPx + 100; px++) {
     const rem = px / fontSize;
