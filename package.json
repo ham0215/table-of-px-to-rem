@@ -18,19 +18,23 @@
     "start": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint": "eslint \"src/**/*.{ts,tsx}\" && tsc --noEmit",
+    "eslint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix && tsc --noEmit",
+    "prettier": "prettier --check \"./{public,src}/**/*.{ts,tsx}\""
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "prettier"
     ]
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ],
     "development": [
       "last 1 chrome version",
@@ -45,6 +49,8 @@
     "@types/node": "^16.7.10",
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.3.2",
     "typescript": "^4.4.2"
   }
 }
