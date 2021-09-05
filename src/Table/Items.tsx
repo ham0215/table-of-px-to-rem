@@ -1,28 +1,22 @@
-import { Alert, Grid, Snackbar } from "@material-ui/core";
-import { styled } from "@material-ui/core/styles";
-import { Paper } from "@material-ui/core";
-import { useTranslation } from "react-i18next";
-import useCopy from "./useCopy";
+import { Alert, Grid, Snackbar } from '@material-ui/core';
+import { styled } from '@material-ui/core/styles';
+import { Paper } from '@material-ui/core';
+import { useTranslation } from 'react-i18next';
+import useCopy from './useCopy';
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
-  textAlign: "center",
+  textAlign: 'center',
   color: theme.palette.text.secondary,
-  width: "10rem",
+  width: '10rem',
 }));
 
 const PrimaryItem = styled(Item)(({ theme }) => ({
   backgroundColor: theme.palette.primary.light,
 }));
 
-export default function Table({
-  index,
-  fontSize,
-}: {
-  index: number;
-  fontSize: number;
-}) {
+export default function Table({ index, fontSize }: { index: number; fontSize: number }) {
   const { handleCopy, openSnackBar, closeSnackBar } = useCopy();
   const { t } = useTranslation();
 
@@ -50,17 +44,9 @@ export default function Table({
       <Grid container spacing={1}>
         {list}
       </Grid>
-      <Snackbar
-        open={openSnackBar}
-        autoHideDuration={6000}
-        onClose={closeSnackBar}
-      >
-        <Alert
-          onClose={closeSnackBar}
-          severity="success"
-          sx={{ width: "100%" }}
-        >
-          {t("copied")}
+      <Snackbar open={openSnackBar} autoHideDuration={6000} onClose={closeSnackBar}>
+        <Alert onClose={closeSnackBar} severity="success" sx={{ width: '100%' }}>
+          {t('copied')}
         </Alert>
       </Snackbar>
     </>

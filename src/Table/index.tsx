@@ -1,17 +1,14 @@
-import { TextField, Box, Alert } from "@material-ui/core";
-import Items from "./Items";
-import useTable, { PAGINATION_MAX_COUNT } from "./useTable";
-import Pagination from "./Pagination";
+import { TextField, Box, Alert } from '@material-ui/core';
+import Items from './Items';
+import useTable, { PAGINATION_MAX_COUNT } from './useTable';
+import Pagination from './Pagination';
 
 export default function Table() {
-  const { index, handleChangeIndex, fontSize, handleChangeFontSize, error } =
-    useTable();
+  const { index, handleChangeIndex, fontSize, handleChangeFontSize, error } = useTable();
   return (
     <>
-      <Box sx={{ margin: "0.5rem" }}>
-        {error && <Alert severity="error">{error}</Alert>}
-      </Box>
-      <Box sx={{ margin: "0.5rem" }}>
+      <Box sx={{ margin: '0.5rem' }}>{error && <Alert severity="error">{error}</Alert>}</Box>
+      <Box sx={{ margin: '0.5rem' }}>
         <TextField
           label="font-size(px)"
           variant="outlined"
@@ -20,7 +17,7 @@ export default function Table() {
         />
       </Box>
 
-      <Box sx={{ margin: "0.5rem" }}>
+      <Box sx={{ margin: '0.5rem' }}>
         <Pagination
           page={index}
           paginationMaxCount={PAGINATION_MAX_COUNT}
@@ -30,7 +27,7 @@ export default function Table() {
       <Box>
         <Items index={index} fontSize={fontSize} />
       </Box>
-      <Box sx={{ margin: "0.5rem" }}>
+      <Box sx={{ margin: '0.5rem' }}>
         <Pagination
           page={index}
           paginationMaxCount={PAGINATION_MAX_COUNT}

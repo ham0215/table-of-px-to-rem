@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState } from 'react';
 
 export default function useCopy() {
   const [openSnackBar, setOpenSnackBar] = useState(false);
@@ -8,7 +8,7 @@ export default function useCopy() {
       const text = event.currentTarget.firstElementChild?.textContent;
       if (!text) return;
 
-      navigator.clipboard.writeText(text.split(" ")[2]).then((e) => {
+      navigator.clipboard.writeText(text.split(' ')[2]).then((e) => {
         setOpenSnackBar(true);
       });
     },
