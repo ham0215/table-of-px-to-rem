@@ -1,6 +1,7 @@
 import { Alert, Grid, Snackbar } from '@material-ui/core';
 import { styled } from '@material-ui/core/styles';
 import { Paper } from '@material-ui/core';
+import { useTranslation } from 'react-i18next';
 import useCopy from './useCopy';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -17,6 +18,7 @@ const PrimaryItem = styled(Item)(({ theme }) => ({
 
 export default function Table({ index, fontSize }: { index: number, fontSize: number }) {
   const { handleCopy, openSnackBar, closeSnackBar } = useCopy();
+  const { t } = useTranslation();
 
   let list = [];
   const startPx = 1 + (index - 1) * 100;
@@ -40,7 +42,7 @@ export default function Table({ index, fontSize }: { index: number, fontSize: nu
         onClose={closeSnackBar}
       >
         <Alert onClose={closeSnackBar} severity="success" sx={{ width: '100%' }}>
-          Copied rem to the clipboard!!
+          {t('copied')}
         </Alert>
       </Snackbar>
     </>
