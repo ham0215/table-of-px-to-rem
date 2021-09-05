@@ -45,5 +45,22 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script type="module">
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js';
+      import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.0.1/firebase-analytics.js';
+
+      const firebaseConfig = {
+        apiKey: 'AIzaSyBbAIPl-f_vrOLTy_KJQShW070qVEGyjkg',
+        authDomain: 'table-of-px-to-rem.firebaseapp.com',
+        projectId: 'table-of-px-to-rem',
+        storageBucket: 'table-of-px-to-rem.appspot.com',
+        messagingSenderId: '252816722077',
+        appId: '1:252816722077:web:7c4f301d9e0be8950dac74',
+        measurementId: 'G-QXJNH302K0',
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
   </body>
 </html>
