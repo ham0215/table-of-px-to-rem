@@ -21,7 +21,8 @@
     "eject": "react-scripts eject",
     "eslint": "eslint \"src/**/*.{ts,tsx}\" && tsc --noEmit",
     "eslint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix && tsc --noEmit",
-    "prettier": "prettier --check \"./{public,src}/**/*.{ts,tsx}\""
+    "prettier:check": "prettier --check \"src/**/*.{ts,tsx}\"",
+    "prettier:write": "prettier --write \"src/**/*.{ts,tsx}\""
   },
   "eslintConfig": {
     "extends": [
