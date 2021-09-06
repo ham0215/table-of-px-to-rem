@@ -6,7 +6,9 @@ export default function Header() {
 
   return (
     <>
-      <Typography variant="h5" component="h1" gutterBottom>{t('title')}</Typography>
+      <Typography variant="h5" component="h1" gutterBottom>
+        {t('title')}
+      </Typography>
       <Typography gutterBottom>{t('description')}</Typography>
     </>
   );

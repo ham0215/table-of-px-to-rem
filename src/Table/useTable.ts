@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useCallback, useState } from "react";
+import React, { useEffect } from 'react';
+import { useCallback, useState } from 'react';
 
 export const PAGINATION_MAX_COUNT = 15;
 export const MAX_FONT_SIZE = 32;
@@ -23,18 +23,21 @@ export default function useTable() {
     setIndex(page);
   }, []);
 
-  const handleChangeFontSize = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-    const fontSize = parseInt(event.target.value);
+  const handleChangeFontSize = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      const fontSize = parseInt(event.target.value);
 
-    if (!validateFontSize(fontSize)) {
-      setError(`Please set an integer from 1 to ${MAX_FONT_SIZE} on the font-size.`);
-      return;
-    }
+      if (!validateFontSize(fontSize)) {
+        setError(`Please set an integer from 1 to ${MAX_FONT_SIZE} on the font-size.`);
+        return;
+      }
 
-    setError('');
-    setFontSize(fontSize);
-    localStorage.setItem('fontSize', String(fontSize));
-  }, [setFontSize]);
+      setError('');
+      setFontSize(fontSize);
+      localStorage.setItem('fontSize', String(fontSize));
+    },
+    [setFontSize]
+  );
 
   useEffect(() => {
     const savedFontSize = localStorage.getItem('fontSize');
@@ -49,6 +52,6 @@ export default function useTable() {
     handleChangeIndex,
     fontSize,
     handleChangeFontSize,
-    error
+    error,
   };
 }
