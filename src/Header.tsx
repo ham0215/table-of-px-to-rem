@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 
 export default function Header() {
@@ -6,9 +6,16 @@ export default function Header() {
 
   return (
     <>
-      <Typography variant="h5" component="h1" gutterBottom>
-        {t('title')}
-      </Typography>
+      <Grid container spacing={3} alignItems="center">
+        <Grid item xs="auto">
+          <Typography variant="h5" component="h1" gutterBottom>
+            {t('title')}
+          </Typography>
+        </Grid>
+        <Grid item xs>
+          hoge
+        </Grid>
+      </Grid>
       <Typography gutterBottom>{t('description')}</Typography>
     </>
   );
