@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom';
+import ColorModeProvider from './ColorModePrivider';
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<ColorModeProvider><App /></ColorModeProvider>, document.getElementById('root'));

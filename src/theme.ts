@@ -1,9 +1,9 @@
-import { createTheme } from '@mui/material/styles';
+import { PaletteMode } from '@mui/material';
 import { red } from '@mui/material/colors';
 
-const theme = createTheme({
+const theme = (mode: PaletteMode) => ({
   palette: {
-    mode: 'dark',
+    mode,
     primary: {
       main: '#556cd6',
     },
