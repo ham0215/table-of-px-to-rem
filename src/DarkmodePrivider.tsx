@@ -7,9 +7,7 @@ export default function DarkmodeProvider({ children }: { children: ReactNode }) 
 
   return (
     <DarkContext.Provider value={mode}>
-      <SetDarkContext.Provider value={setMode}>
-        {children}
-      </SetDarkContext.Provider>
+      <SetDarkContext.Provider value={setMode}>{children}</SetDarkContext.Provider>
     </DarkContext.Provider>
   );
 }

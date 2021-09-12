@@ -1,6 +1,5 @@
-import { Alert, Grid, Snackbar } from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
-import { Paper } from '@material-ui/core';
+import { Alert, Grid, Snackbar, Paper } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import useCopy from './useCopy';
 

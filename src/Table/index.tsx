@@ -1,4 +1,4 @@
-import { TextField, Box, Alert } from '@material-ui/core';
+import { TextField, Box, Alert } from '@mui/material';
 import Items from './Items';
 import useTable, { PAGINATION_MAX_COUNT } from './useTable';
 import Pagination from './Pagination';

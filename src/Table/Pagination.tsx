@@ -1,4 +1,4 @@
-import { Pagination } from '@material-ui/core';
+import { Pagination } from '@mui/material';
 
 export default function StyledPagination({
   page,

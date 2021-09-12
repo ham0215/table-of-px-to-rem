@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
+import { Container } from '@mui/material';
 import theme from './theme';
 import './i18n';
 import Copyright from './Copyright';
