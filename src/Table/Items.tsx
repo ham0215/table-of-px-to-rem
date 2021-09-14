@@ -7,12 +7,12 @@ const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
-  color: theme.palette.text.secondary,
+  color: theme.palette.text.primary,
   width: '10rem',
 }));
 
 const PrimaryItem = styled(Item)(({ theme }) => ({
-  backgroundColor: theme.palette.primary.light,
+  backgroundColor: theme.palette.success.light,
 }));
 
 export default function Table({ index, fontSize }: { index: number; fontSize: number }) {
