@@ -8,7 +8,7 @@ let container: HTMLDivElement | null = null;
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const i18nResource = i18n.getDataByLanguage(i18n.language)!;
 
-describe('ログイン', () => {
+describe('App', () => {
   beforeEach(() => {
     // setup a DOM element as a render target
     container = document.createElement('div');
@@ -24,7 +24,7 @@ describe('ログイン', () => {
     container = null;
   });
 
-  it('render Dashbord', () => {
+  it('render App', () => {
     act(() => {
       render(<App />, container);
     });
