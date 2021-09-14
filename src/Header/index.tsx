@@ -20,7 +20,7 @@ export default function Header() {
           </Typography>
         </Grid>
         <Grid item xs>
-          <IconButton sx={{ ml: 1 }} color="inherit" onClick={togglePaletteMode} >
+          <IconButton sx={{ ml: 1 }} color="inherit" onClick={togglePaletteMode}>
             {theme.palette.mode === 'dark' ? <Brightness4Icon /> : <Brightness7Icon />}
           </IconButton>
         </Grid>
