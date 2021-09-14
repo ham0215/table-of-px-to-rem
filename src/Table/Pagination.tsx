@@ -12,7 +12,6 @@ export default function StyledPagination({
   return (
     <Pagination
       count={paginationMaxCount}
-      color="primary"
       boundaryCount={paginationMaxCount}
       page={page}
       hideNextButton
