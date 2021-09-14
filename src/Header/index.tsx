@@ -10,14 +10,12 @@ export default function Header() {
   const setPaletteMode = useContext(SetPaletteModeContext);
   const theme = useTheme();
 
-  const toggleColorMode = useCallback(
-    () => {
-      if (!setPaletteMode) return;
+  const toggleColorMode = useCallback(() => {
+    if (!setPaletteMode) return;
 
-      const nextMode = theme.palette.mode === 'dark' ? 'light' : 'dark';
-      setPaletteMode(nextMode);
-    }, [setPaletteMode, theme.palette.mode]
-  );
+    const nextMode = theme.palette.mode === 'dark' ? 'light' : 'dark';
+    setPaletteMode(nextMode);
+  }, [setPaletteMode, theme.palette.mode]);
 
   return (
     <>
