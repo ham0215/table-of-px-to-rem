@@ -1,4 +1,4 @@
-import { useContext, useMemo } from 'react';
+import { useContext, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
@@ -9,18 +9,21 @@ import './i18n';
 import Copyright from './Copyright';
 import Table from './Table';
 import Header from './Header';
-import { ModeContext } from './ColorModePrivider';
+import { PaletteModeContext } from './PaletteModeProvider';
 
 export default function App() {
   const { i18n } = useTranslation();
-  i18n.changeLanguage(window.navigator.language);
-  const mode = useContext(ModeContext);
+
+  useEffect(() => {
+    i18n.changeLanguage(window.navigator.language);
+  }, [i18n]);
+
+  const paletteMode = useContext(PaletteModeContext);
   const theme = useMemo(
     () =>
-      createTheme(defaultTheme(mode)),
-    [mode],
+      createTheme(defaultTheme(paletteMode)),
+    [paletteMode],
   );
-
 
   return (
     <ThemeProvider theme={theme}>
