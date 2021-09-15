@@ -1,4 +1,4 @@
-import { Pagination } from '@material-ui/core';
+import { Pagination } from '@mui/material';
 
 export default function StyledPagination({
   page,
@@ -12,7 +12,6 @@ export default function StyledPagination({
   return (
     <Pagination
       count={paginationMaxCount}
-      color="primary"
       boundaryCount={paginationMaxCount}
       page={page}
       hideNextButton
