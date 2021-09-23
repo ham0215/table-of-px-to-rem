@@ -13,7 +13,7 @@ const resources = {
   ja: {
     translation: {
       title: 'pxからremへ変換',
-      description: `font-fize(px)を入力すると、1〜1500pxに対応するremを表示します。font-sizeには1〜${MAX_FONT_SIZE}を入力してください。`,
+      description: `font-size(px)を入力すると、1〜1500pxに対応するremを表示します。font-sizeには1〜${MAX_FONT_SIZE}を入力してください。`,
       copied: 'クリップボードにコピーしました!!',
     },
   },
