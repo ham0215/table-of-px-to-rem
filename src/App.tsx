@@ -5,7 +5,7 @@ import './i18n';
 import Copyright from './Copyright';
 import Table from './Table';
 import Header from './Header';
-import ThemeProvider from './ThemeProvider';
+import ThemeProvider from './providers/ThemeProvider';
 
 export default function App() {
   const { i18n } = useTranslation();

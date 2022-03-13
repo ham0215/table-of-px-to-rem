@@ -4,7 +4,7 @@ import { Grid, IconButton, Typography } from '@mui/material';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { useTheme } from '@mui/material';
-import { TogglePaletteModeContext } from 'PaletteModeProvider';
+import { TogglePaletteModeContext } from 'providers/PaletteModeProvider';
 
 export default function Header() {
   const { t } = useTranslation();
