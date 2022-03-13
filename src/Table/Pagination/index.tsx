@@ -1,13 +1,15 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Pagination } from '@mui/material';
 
-export default function StyledPagination({ page, paginationMaxCount }: { page: number; paginationMaxCount: number }) {
+export default function StyledPagination({ page }: { page: number }) {
   const navigate = useNavigate();
-  const onChange = (event: React.ChangeEvent<unknown>, page: number) => navigate(`?p=${page}`);
+  const [searchParams] = useSearchParams();
+  const fontSize = Number(searchParams.get('f')) || 16;
+  const onChange = (event: React.ChangeEvent<unknown>, page: number) => navigate(`?p=${page}&f=${fontSize}`);
   return (
     <Pagination
-      count={paginationMaxCount}
-      boundaryCount={paginationMaxCount}
+      count={15}
+      boundaryCount={15}
       page={page}
       hideNextButton
       hidePrevButton
