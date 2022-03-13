@@ -1,10 +1,14 @@
 import { TextField, Box, Alert } from '@mui/material';
+import { useSearchParams } from 'react-router-dom';
 import Items from './Items';
 import useTable, { PAGINATION_MAX_COUNT } from './useTable';
 import Pagination from './Pagination';
 
 export default function Table() {
-  const { index, handleChangeIndex, fontSize, handleChangeFontSize, error } = useTable();
+  const { fontSize, handleChangeFontSize, error } = useTable();
+  const [searchParams] = useSearchParams();
+  const page = Number(searchParams.get('p')) || 1;
+
   return (
     <>
       <Box sx={{ margin: '0.5rem' }}>{error && <Alert severity="error">{error}</Alert>}</Box>
@@ -13,13 +17,13 @@ export default function Table() {
       </Box>
 
       <Box sx={{ margin: '0.5rem' }}>
-        <Pagination page={index} paginationMaxCount={PAGINATION_MAX_COUNT} handleChangeIndex={handleChangeIndex} />
+        <Pagination page={page} paginationMaxCount={PAGINATION_MAX_COUNT} />
       </Box>
       <Box>
-        <Items index={index} fontSize={fontSize} />
+        <Items page={page} fontSize={fontSize} />
       </Box>
       <Box sx={{ margin: '0.5rem' }}>
-        <Pagination page={index} paginationMaxCount={PAGINATION_MAX_COUNT} handleChangeIndex={handleChangeIndex} />
+        <Pagination page={page} paginationMaxCount={PAGINATION_MAX_COUNT} />
       </Box>
     </>
   );

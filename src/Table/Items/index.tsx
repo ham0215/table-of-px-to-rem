@@ -15,12 +15,12 @@ const PrimaryItem = styled(Item)(({ theme }) => ({
   backgroundColor: theme.palette.success.light,
 }));
 
-export default function Table({ index, fontSize }: { index: number; fontSize: number }) {
+export default function Table({ page, fontSize }: { page: number; fontSize: number }) {
   const { handleCopy, openSnackBar, closeSnackBar } = useCopy();
   const { t } = useTranslation();
 
   const list = [];
-  const startPx = 1 + (index - 1) * 100;
+  const startPx = 1 + (page - 1) * 100;
   for (let px = startPx; px < startPx + 100; px++) {
     const rem = px / fontSize;
     list.push(

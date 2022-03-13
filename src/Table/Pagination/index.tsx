@@ -1,14 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { Pagination } from '@mui/material';
 
-export default function StyledPagination({
-  page,
-  paginationMaxCount,
-  handleChangeIndex,
-}: {
-  page: number;
-  paginationMaxCount: number;
-  handleChangeIndex: (event: React.ChangeEvent<unknown>, page: number) => void;
-}) {
+export default function StyledPagination({ page, paginationMaxCount }: { page: number; paginationMaxCount: number }) {
+  const navigate = useNavigate();
+  const onChange = (event: React.ChangeEvent<unknown>, page: number) => navigate(`?p=${page}`);
   return (
     <Pagination
       count={paginationMaxCount}
@@ -17,7 +12,7 @@ export default function StyledPagination({
       hideNextButton
       hidePrevButton
       size="small"
-      onChange={handleChangeIndex}
+      onChange={onChange}
     />
   );
 }
