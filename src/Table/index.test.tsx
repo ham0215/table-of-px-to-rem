@@ -1,5 +1,5 @@
 import Table from '.';
-import { render } from '@testing-library/react';
+import { render } from 'test-utilsq';
 
 describe('Table', () => {
   test('snapshot testing', () => {
