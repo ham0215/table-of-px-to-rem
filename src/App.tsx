@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { BrowserRouter } from 'react-router-dom';
 import { Container } from '@mui/material';
 import './i18n';
 import Copyright from './Copyright';
@@ -16,11 +17,13 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <Container maxWidth="xl">
-        <Header />
-        <Table />
-        <Copyright />
-      </Container>
+      <BrowserRouter>
+        <Container maxWidth="xl">
+          <Header />
+          <Table />
+          <Copyright />
+        </Container>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
