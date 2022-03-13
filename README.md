@@ -1,5 +1,11 @@
 # Table of px to rem
 
+[![Deploy](https://github.com/ham0215/table-of-px-to-rem/actions/workflows/firebase-hosting-merge.yml/badge.svg)](https://github.com/ham0215/table-of-px-to-rem/actions/workflows/firebase-hosting-merge.yml)
+[![Build](https://github.com/ham0215/table-of-px-to-rem/actions/workflows/build.yml/badge.svg)](https://github.com/ham0215/table-of-px-to-rem/actions/workflows/build.yml)
+[![ESLint](https://github.com/ham0215/table-of-px-to-rem/actions/workflows/eslint.yml/badge.svg)](https://github.com/ham0215/table-of-px-to-rem/actions/workflows/eslint.yml)
+[![Prettier](https://github.com/ham0215/table-of-px-to-rem/actions/workflows/prettier.yml/badge.svg)](https://github.com/ham0215/table-of-px-to-rem/actions/workflows/prettier.yml)
+[![Test](https://github.com/ham0215/table-of-px-to-rem/actions/workflows/test.yml/badge.svg)](https://github.com/ham0215/table-of-px-to-rem/actions/workflows/test.yml)
+
 [for japanese](README.ja.md)
 
 This is a px to rem conversion table.
