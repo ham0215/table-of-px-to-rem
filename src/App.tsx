@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { BrowserRouter } from 'react-router-dom';
 import { Container } from '@mui/material';
 import './i18n';
 import Copyright from './Copyright';
 import Table from './Table';
 import Header from './Header';
-import ThemeProvider from './ThemeProvider';
+import ThemeProvider from './providers/ThemeProvider';
 
 export default function App() {
   const { i18n } = useTranslation();
@@ -16,11 +17,13 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <Container maxWidth="xl">
-        <Header />
-        <Table />
-        <Copyright />
-      </Container>
+      <BrowserRouter>
+        <Container maxWidth="xl">
+          <Header />
+          <Table />
+          <Copyright />
+        </Container>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
