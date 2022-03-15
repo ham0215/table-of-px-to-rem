@@ -1,10 +1,10 @@
 import { Alert, Grid, Snackbar, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 import { useTranslation } from 'react-i18next';
 import useCopy from './useCopy';
 
 const Item = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.primary,
@@ -25,15 +25,17 @@ export default function Table({ page, fontSize }: { page: number; fontSize: numb
     const rem = px / fontSize;
     list.push(
       <Grid item key={px} onClick={handleCopy}>
-        {Number.isInteger(rem) ? (
-          <PrimaryItem>
-            {px}px = {rem}rem
-          </PrimaryItem>
-        ) : (
-          <Item>
-            {px}px = {rem}rem
-          </Item>
-        )}
+        <Typography variant="body2">
+          {Number.isInteger(rem) ? (
+            <PrimaryItem>
+              {px}px = {rem}rem
+            </PrimaryItem>
+          ) : (
+            <Item>
+              {px}px = {rem}rem
+            </Item>
+          )}
+        </Typography>
       </Grid>
     );
   }
