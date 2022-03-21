@@ -25,17 +25,19 @@ export default function Table({ page, fontSize }: { page: number; fontSize: numb
     const rem = px / fontSize;
     list.push(
       <Grid item key={px} onClick={handleCopy}>
-        <Typography variant="body2">
-          {Number.isInteger(rem) ? (
-            <PrimaryItem>
+        {Number.isInteger(rem) ? (
+          <PrimaryItem>
+            <Typography variant="body2">
               {px}px = {rem}rem
-            </PrimaryItem>
-          ) : (
-            <Item>
+            </Typography>
+          </PrimaryItem>
+        ) : (
+          <Item>
+            <Typography variant="body2">
               {px}px = {rem}rem
-            </Item>
-          )}
-        </Typography>
+            </Typography>
+          </Item>
+        )}
       </Grid>
     );
   }

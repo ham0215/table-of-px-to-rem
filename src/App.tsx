@@ -17,6 +17,6 @@ export default function App() {
       <BrowserRouter>
         <Top />
       </BrowserRouter>
-    </ThemeProvider >
+    </ThemeProvider>
   );
 }
