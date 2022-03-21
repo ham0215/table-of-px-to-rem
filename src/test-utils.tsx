@@ -1,12 +1,12 @@
 import { FC, ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 import ThemeProvider from './providers/ThemeProvider';
-import { BrowserRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 
 const AllTheProviders: FC = ({ children }) => {
   return (
     <ThemeProvider>
-      <BrowserRouter>{children}</BrowserRouter>
+      <MemoryRouter>{children}</MemoryRouter>
     </ThemeProvider>
   );
 };
