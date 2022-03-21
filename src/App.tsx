@@ -1,11 +1,8 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BrowserRouter } from 'react-router-dom';
-import { Container } from '@mui/material';
 import './i18n';
-import Copyright from './Copyright';
-import Table from './Table';
-import Header from './Header';
+import Top from './Top';
 import ThemeProvider from './providers/ThemeProvider';
 
 export default function App() {
@@ -18,12 +15,8 @@ export default function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
-        <Container maxWidth="xl">
-          <Header />
-          <Table />
-          <Copyright />
-        </Container>
+        <Top />
       </BrowserRouter>
-    </ThemeProvider>
+    </ThemeProvider >
   );
 }
