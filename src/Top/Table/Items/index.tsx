@@ -3,6 +3,7 @@ import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import { useTranslation } from 'react-i18next';
 import useCopy from './useCopy';
+import { validFontSize } from '../FontSizeEditor/useFontSizeEditor';
 
 const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
@@ -15,14 +16,15 @@ const PrimaryItem = styled(Item)(({ theme }) => ({
   backgroundColor: theme.palette.success.light,
 }));
 
-export default function Table({ page, fontSize }: { page: number; fontSize: number }) {
+export default function Table({ page, fontSize }: { page: number; fontSize: string }) {
   const { handleCopy, openSnackBar, closeSnackBar } = useCopy();
   const { t } = useTranslation();
+  const iFontSize = validFontSize(fontSize);
 
   const list = [];
   const startPx = 1 + (page - 1) * 100;
   for (let px = startPx; px < startPx + 100; px++) {
-    const rem = px / fontSize;
+    const rem = px / iFontSize;
     list.push(
       <Grid item key={px} onClick={handleCopy}>
         {Number.isInteger(rem) ? (

@@ -1,10 +1,8 @@
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Pagination } from '@mui/material';
 
-export default function StyledPagination({ page }: { page: number }) {
+export default function StyledPagination({ page, fontSize }: { page: number; fontSize: string }) {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const fontSize = Number(searchParams.get('f')) || 16;
   const onChange = (event: React.ChangeEvent<unknown>, page: number) => navigate(`?p=${page}&f=${fontSize}`);
   return (
     <Pagination
