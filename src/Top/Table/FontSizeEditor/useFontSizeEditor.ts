@@ -1,7 +1,6 @@
 import { useCallback, useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
-
-export const MAX_FONT_SIZE = 32;
+import { MAX_FONT_SIZE } from 'Constants';
 
 function validateFontSize(fontSize: number) {
   return Number.isInteger(fontSize) && fontSize > 0 && fontSize <= MAX_FONT_SIZE;
