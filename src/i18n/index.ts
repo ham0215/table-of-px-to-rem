@@ -1,6 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import { MAX_FONT_SIZE } from 'Table/FontSizeEditor/useFontSizeEditor';
+import { MAX_FONT_SIZE } from 'Constants';
 
 const resources = {
   en: {
