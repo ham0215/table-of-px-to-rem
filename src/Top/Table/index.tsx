@@ -3,11 +3,13 @@ import { useSearchParams } from 'react-router-dom';
 import Items from './Items';
 import Pagination from './Pagination';
 import FontSizeEditor from './FontSizeEditor';
+import { validateFontSize } from './FontSizeEditor/useFontSizeEditor';
 
 export default function Table() {
   const [searchParams] = useSearchParams();
   const page = Number(searchParams.get('p')) || 1;
-  const fontSize = Number(searchParams.get('f')) || 16;
+  const inputFontSize = Number(searchParams.get('f'));
+  const fontSize = validateFontSize(inputFontSize) ? inputFontSize : 16;
 
   return (
     <>
