@@ -14,6 +14,7 @@ describe('FontSizeEditor', () => {
     const textbox = await findByRole('textbox');
     expect(textbox).toHaveValue('16');
 
+    userEvent.clear(textbox);
     userEvent.type(textbox, '24');
     await waitFor(() => {
       getByDisplayValue('24');
