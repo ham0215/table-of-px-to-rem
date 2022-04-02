@@ -6,13 +6,13 @@ describe('FontSizeEditor', () => {
   it('初期表示', async () => {
     const { findByRole } = render(<FontSizeEditor />);
     const textbox = await findByRole('textbox');
-    expect(textbox).toHaveValue('');
+    expect(textbox).toHaveValue('16');
   });
 
   it('別の数字に変更した場合', async () => {
     const { findByRole, getByDisplayValue } = render(<FontSizeEditor />);
     const textbox = await findByRole('textbox');
-    expect(textbox).toHaveValue('');
+    expect(textbox).toHaveValue('16');
 
     userEvent.type(textbox, '24');
     await waitFor(() => {
@@ -23,7 +23,7 @@ describe('FontSizeEditor', () => {
   it('不正な値に変更した場合', async () => {
     const { findByRole, getByText } = render(<FontSizeEditor />);
     const textbox = await findByRole('textbox');
-    expect(textbox).toHaveValue('');
+    expect(textbox).toHaveValue('16');
 
     userEvent.type(textbox, '33');
     await waitFor(() => {
