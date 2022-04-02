@@ -19,7 +19,6 @@ describe('Items', () => {
 });
 
 describe('Clipboard', () => {
-
   beforeEach(() => {
     Object.assign(navigator, {
       clipboard: {
