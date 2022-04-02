@@ -1,13 +1,11 @@
 import { Box } from '@mui/material';
-import { useSearchParams } from 'react-router-dom';
+import useParams from './useParams';
 import Items from './Items';
 import Pagination from './Pagination';
 import FontSizeEditor from './FontSizeEditor';
 
 export default function Table() {
-  const [searchParams] = useSearchParams();
-  const page = Number(searchParams.get('p')) || 1;
-  const fontSize = searchParams.get('f') || '';
+  const { page, fontSize } = useParams();
 
   return (
     <>
