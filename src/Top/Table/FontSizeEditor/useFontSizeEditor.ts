@@ -1,6 +1,7 @@
 import { useCallback } from 'react';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { MAX_FONT_SIZE } from 'Constants';
+import useParams from '../useParams';
 
 export function validateFontSize(fontSize: string) {
   const iFontSize = Number(fontSize);
@@ -13,9 +14,7 @@ export function validFontSize(fontSize: string) {
 
 export default function useFontSizeEditor() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const page = Number(searchParams.get('p')) || 1;
-  const fontSize = searchParams.get('f') || '';
+  const { page, fontSize } = useParams();
   const error = validateFontSize(fontSize) ? '' : `Please set an integer from 1 to ${MAX_FONT_SIZE} on the font-size.`;
 
   const handleChangeFontSize = useCallback(

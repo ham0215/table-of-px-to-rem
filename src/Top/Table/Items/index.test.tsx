@@ -1,5 +1,5 @@
 import Items from '.';
-import { render, waitFor } from 'test-utils';
+import { render, waitFor, i18n } from 'test-utils';
 import userEvent from '@testing-library/user-event';
 
 describe('Items', () => {
@@ -48,5 +48,6 @@ describe('Clipboard', () => {
     await waitFor(() => {
       expect(navigator.clipboard.readText()).toEqual('1rem');
     });
+    getByText(i18n.t('copied').toString());
   });
 });
