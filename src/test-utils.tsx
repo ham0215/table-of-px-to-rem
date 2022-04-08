@@ -1,10 +1,14 @@
-import { FC, ReactElement } from 'react';
+import { VFC, ReactElement, ReactNode } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 import ThemeProvider from './providers/ThemeProvider';
 import { MemoryRouter } from 'react-router-dom';
 import i18n from 'i18n';
 
-const AllTheProviders: FC = ({ children }) => {
+export type Props = {
+  children: ReactNode;
+};
+
+const AllTheProviders: VFC<Props> = ({ children }) => {
   return (
     <ThemeProvider>
       <MemoryRouter>{children}</MemoryRouter>
