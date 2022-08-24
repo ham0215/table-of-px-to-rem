@@ -1,7 +1,7 @@
 {
   "name": "table-of-px-to-rem",
   "version": "1.0.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@emotion/react": "11.10.0",
     "@emotion/styled": "11.10.0",
