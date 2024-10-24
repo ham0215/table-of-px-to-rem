@@ -8,7 +8,7 @@
     "@mui/icons-material": "5.11.9",
     "@mui/material": "5.11.10",
     "firebase": "9.23.0",
-    "i18next": "22.5.1",
+    "i18next": "23.16.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "12.3.1",
